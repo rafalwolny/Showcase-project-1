@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: rgb(230, 230, 240);
+}
+body{
+    font-style: Helvetica, arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: hsl(249, 9%, 16%)
+}
+/* Style nagłówka */
+header{
+    position: relative;
+    background: 
+        linear-gradient(to right, 
+            rgba(243, 244, 255, 0.55),
+            rgba(243, 244, 255, 0.55)70vw,
+            rgba(40, 126, 255, 0.95) 70vw,
+            rgba(40, 126, 255, 0.95)
+        );
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+.background{
+    background-image: url("img/computer.jpg");
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+header *{
+    margin-left: 10vw;
+    max-width: 50vw;
+}
+/* Style paska nawigacji */
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(230, 230, 240);/* Tło białe*/
+    width: 100vw;
+    height: 7vh;
+    min-height: 30px;
+    z-index: 1;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    margin: 10px;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+/* Style sekcji z przyciskami */
+body section{
+    background-color: rgb(230, 230, 240);/* Tło białe*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+body section h2{
+    width: 100%;
+    text-align: center;
+    margin: 3% 0 0;
+}
+body section a{
+    text-decoration: none;
+    margin: 3% 10% 3%;
+}
+body section a{
+    border-radius: 20px;
+    padding: 5px 30px;
+    box-sizing: border-box;
+    background-color: rgba(40, 126, 255);
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+body section a:hover {
+    background-color: rgb(238, 208, 39);
+    color: white;
+}
+/* Style ikonek social media */
+body ul{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+}
+body ul li{
+    list-style: none;
+    margin: 10px;
+}
+body ul li a{
+    width: 10vw;
+    height: 10vh;
+    text-align: center;
+    margin: 15px;
+    color:rgb(0, 0, 0);
+}
+body ul li {
+    transition: all 0.3s ease-in-out;
+}
+body ul li:hover {
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 560px) {
+    nav {
+        display: none;
+    }
+    body ul{
+        display: none;
+    }
+}
+/* Style główne */
+main {
+    background-color: rgb(220, 219, 230);/* Tło strony*/
+    padding: 0 5%;
+}
+/* Style sekcji "About" */
+main article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(230, 230, 240); /* Tło białe*/
+    margin-bottom: 5vh;
+}
+article h2{
+    text-align: center;
+    flex: 100%;
+    background-color: rgb(220, 219, 230); /* Tło strony*/
+    padding: 5% 0 3%;
+}
+.box-1{
+    width: 40%;
+    margin: 10px;
+}
+.box-2{
+    width: 50%;
+    margin: 10px;
+}
+/* Style galerii */
+main section{
+    background-color: rgb(220, 219, 230);/* Tło strony*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+main section div{
+    flex: 1;
+    background-color: rgb(230, 230, 240);/* Tło białe*/
+    width: 30%;
+    min-width: 300px;
+    margin: 10px;
+}
+main section div{
+    transition: all 0.4s ease-in-out;
+}
+main section div:hover{
+    transform: scale(1.05);
+}
+main section div img{
+    max-width: 100%;
+    height:auto;
+    width:auto;
+}
+main section div h3{
+    line-height: 0.9em;
+    margin: 5px 10px 10px 10px;
+}
+main section div p{
+    font-size: 0.8em;
+    line-height: 0.9em;
+    margin: 5px 10px 10px 10px;
+}
+/* Style stopki */
+.container{
+    margin: 3% 5% 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.media-link{
+    flex: 1;
+    padding: 15px;
+    line-height: 1.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(40, 126, 255);
+    color: rgb(230, 230, 240);
+}
+.description{
+    flex: 1;
+    flex-grow: 2;
+    padding: 15px;
+    line-height: 1.6em;
+    background-color: rgb(220, 219, 230);
+}
+.media-link p{
+    flex: 1;
+    font-weight: bold;
+}
+footer a{
+    flex: 1;
+    text-decoration: none;
+    color: rgb(230, 230, 240);
+    transition: all 0.2s ease-in-out;
+}
+footer a:hover{
+    color: rgb(238, 208, 39);
+    text-decoration-line: underline;
+}
+.copyright{
+    text-align: center;
+    font-size: 0.7em;
+}
